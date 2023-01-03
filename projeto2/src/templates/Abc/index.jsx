@@ -1,8 +1,16 @@
 import { useEffect } from 'react';
-import { useHistory, useLocation, useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 export const Abc = () => {
   const { slug, id } = useParams();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Em 5 segundos seremos redirecionados para a / (App)
+    setTimeout(() => {
+      navigate('/');
+    }, 5000);
+  }, [navigate]);
 
   return (
     <div>

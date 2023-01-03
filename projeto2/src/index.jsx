@@ -1,22 +1,23 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { Menu } from './components/Menu';
+import ReactDOM from 'react-dom/client';
 import './index.css';
-import { Abc } from './templates/Abc';
 import { App } from './templates/App';
+import { Menu } from './components/Menu';
+import { Route, BrowserRouter, Routes } from 'react-router-dom';
+import { Abc } from './templates/Abc';
 import { Page404 } from './templates/Page404';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Menu />
-      <Switch>
-        <Route path="/abc" component={Abc} />
-        <Route path="/" component={App} exact />
-        <Route path="*" component={Page404} />
-      </Switch>
-    </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById('root'),
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(
+  <BrowserRouter>
+    <Menu />
+    <Routes>
+      <Route index path="/" element={<App />} />
+      <Route path="/abc/:slug/:id" element={<Abc />} />
+      <Route path="/abc/:slug" element={<Abc />} />
+      <Route path="/abc/" element={<Abc />} />
+      <Route path="*" element={<Page404 />} />
+    </Routes>
+  </BrowserRouter>,
 );
