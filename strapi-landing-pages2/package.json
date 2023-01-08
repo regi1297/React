@@ -1,5 +1,5 @@
 {
-  "name": "strapi-landing-pages",
+  "name": "strapi-landing-pages-2",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -14,13 +14,13 @@
     "@strapi/strapi": "4.5.5",
     "@strapi/plugin-users-permissions": "4.5.5",
     "@strapi/plugin-i18n": "4.5.5",
-    "pg": "8.6.0"
+    "better-sqlite3": "7.4.6"
   },
   "author": {
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "cd98c4a1-2915-4fc2-9ae1-387c79b4aa61"
+    "uuid": "ec6d9787-9092-47d4-b381-fc05364651f9"
   },
   "engines": {
     "node": ">=14.19.1 <=18.x.x",
