@@ -36,6 +36,11 @@
     "footer_text": {
       "type": "richtext",
       "required": true
+    },
+    "menu": {
+      "type": "component",
+      "repeatable": false,
+      "component": "menu.menu"
     }
   }
 }
